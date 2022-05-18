@@ -141,10 +141,13 @@ ul {
     border-radius: 4px;
 }
 
-.catalog .link:hover,
-catalog .link:focus {
+.catalog.list .link:hover,
+.catalog.list .link:focus {
+    color: #FFFFFF;
+    background-color: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
 
 .list .link:hover,
 .list .link:focus,
@@ -218,31 +221,32 @@ catalog .link:focus {
 
 }
 
-.progect-list {
+.project-list {
     display: flex;
     flex-wrap: wrap;
     padding-inline-start: 0px;
 }
 
-.progect-item:hover,
-.progect-item:focus {
+.project-item .project-link:hover,
+.project-item .project-link:focus {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.progect-item {
+.project-item {
     margin-right: 30px;
     margin-bottom: 30px;
 }
 
 .project-link {
     text-decoration: none;
+    display: block;
 }
 
-.progect-item:nth-child(3n) {
+.project-item:nth-child(3n) {
     margin-right: 0px;
 }
 
-.progect-item:nth-last-child(-n+3) {
+.project-item:nth-last-child(-n+3) {
     margin-bottom: 0px;
 }
 
@@ -303,8 +307,8 @@ catalog .link:focus {
 .benefits-icon-wrapper {
     display: flex;
     justify-content: center;
-    align-self: center;
-    padding: 25px 0;
+    align-items: center;
+    height: 120px;
     background: #F5F4FA;
     border-radius: 4px;
     margin-bottom: 30px;
@@ -394,6 +398,7 @@ catalog .link:focus {
 .link-intro {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    background-color: #FFFFFF;
 
 }
 
@@ -496,22 +501,18 @@ catalog .link:focus {
 
 .clients-list {
     display: flex;
+    justify-content: center;
     padding-inline-start: 0px;
 }
 
-.clients-item {
-    padding: 16px 32px;
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
-    cursor: pointer;
-}
+
 
 .clients-item:not(:last-child) {
     margin-right: 30px;
 }
 
-.clients-item:hover,
-.clients-item:focus {
+.clients-item:hover .clients-link,
+.clients-item:focus .clients-link {
     border-color: var(--accent-color);
 }
 
@@ -520,6 +521,21 @@ catalog .link:focus {
     fill: var(--accent-color);
 }
 
+.clients-item {
+    width: 170px;
+    height: 92px;
+}
+
+.clients-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+
+}
 
 .clients-icon {
     fill: #AFB1B8;
@@ -558,6 +574,7 @@ catalog .link:focus {
 
 .footer-container {
     display: flex;
+    align-items: baseline;
 }
 
 .join-caption {
