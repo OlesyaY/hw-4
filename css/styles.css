@@ -511,13 +511,13 @@ ul {
     margin-right: 30px;
 }
 
-.clients-item:hover .clients-link,
-.clients-item:focus .clients-link {
+.clients-link:hover,
+.clients-link:focus {
     border-color: var(--accent-color);
 }
 
-.clients-item:hover .clients-icon,
-.clients-item:focus .clients-icon {
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
     fill: var(--accent-color);
 }
 
